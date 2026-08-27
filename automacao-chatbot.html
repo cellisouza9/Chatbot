@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>Celly Automação - Chatbot com Inteligência Artificial</title>
+<link rel="icon" type="image/png" href="portifolio-img/img/favicon-celly.png">
+<!-- CSS -->
+<link rel="stylesheet" href="automacao-chatbot.css?v=14">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+<!-- ======================================== -->
+<!-- NAVBAR-->
+<!-- ======================================== -->
+<nav class="bot-navbar">
+<div class="container">
+<a href="portfolio.html" class="bot-logo">
+<img src="portifolio-img/img/logo celly1.png" alt="Celly Logo">
+
+</a>
+<button class="bot-menu-toggle" id="botMenuToggle"><i class="fas fa-bars"></i></button>
+<ul class="bot-nav-menu" id="botNavMenu">
+<li><a href="#home">Início</a></li>
+<li><a href="#recursos">Recursos</a></li>
+<li><a href="#planos">Planos</a></li>
+<li><a href="#faq">Dúvidas</a></li>
+<li class="bot-nav-voltar"><a href="index.html" target="_blank" rel="noopener"><i class="fas fa-arrow-left"></i> Sistema p/ bares</a></li>
+<li class="bot-nav-cta"><a href="#contato">Testar grátis</a></li>
+</ul>
+</div>
+</nav>
+<!-- ======================================== -->
+<!-- HERO                                      -->
+<!-- ======================================== -->
+<section id="home" class="bot-hero">
+<div class="container">
+<div class="bot-hero-texto">
+<h1>Um <span>chatbot com IA</span> que atende, tira dúvidas e vende sozinho, 24h por dia</h1>
+<p>Automatize o atendimento do seu WhatsApp com Inteligência Artificial treinada para o seu negócio. Responda na hora, recupere clientes parados e venda no automático — sem contratar mais ninguém.</p>
+</div>
+<div class="bot-hero-visual">
+<img src="portifolio-img/comercial/chat bot whatsapp ia.png" alt="Chatbot com IA Celly Automação">
+</div>
+</div>
+</section>
+<!-- RECURSOS -->
+<!-- ======================================== -->
+<section class="bot-section" id="recursos">
+<div class="container">
+<div class="bot-section-header">
+<h2>Um vendedor <span>virtual</span> que nunca dorme</h2>
+<p>Tudo o que sua operação precisa para atender rápido, recuperar vendas perdidas e escalar sem contratar mais gente.</p>
+</div>
+</div>
+</section>
+<!-- ============================================================
+BLOCO "VEJA NA PRÁTICA" — chat demo (versão 1b)============================================================ -->
+<section class="bot-section" id="veja-na-pratica">
+<div class="container">
+<div class="bot-chatdemo bot-reveal">
+<!-- ---------- celular ---------- -->
+<div class="bot-chatdemo-phone">
+<div class="bot-chatdemo-header">
+<div class="bot-chatdemo-avatar">A</div>
+<div class="bot-chatdemo-ident">
+<span class="bot-chatdemo-nome">Andressa</span>
+<span class="bot-chatdemo-status"><i></i>online</span>
+</div>
+<svg class="bot-chatdemo-hicon" viewBox="0 0 256 256" aria-hidden="true"><path d="M222 158.5l-47.7-21.4a14 14 0 00-13.6 1.2l-24.1 16.1a70.4 70.4 0 01-34.9-34.7l16.2-24.4a14 14 0 001.1-13.5L97.5 34a14 14 0 00-14.6-8.3A50.2 50.2 0 0038 75.4C38 175.9 118.2 226 158.6 226a50.2 50.2 0 0049.7-44.9 14 14 0 00-6.3-13.5z"/></svg>
+<svg class="bot-chatdemo-hicon" viewBox="0 0 256 256" aria-hidden="true"><path d="M164 60H32a12 12 0 00-12 12v112a12 12 0 0012 12h132a12 12 0 0012-12V72a12 12 0 00-12-12zm70 14v108a6 6 0 01-9 5.2l-37-21.4V90.2l37-21.4a6 6 0 019 5.2z"/></svg>
+</div>
+<!-- as mensagens são inseridas aqui pelo JS -->
+<div class="bot-chatdemo-corpo" id="botChatCorpo"></div>
+<div class="bot-chatdemo-input">
+<span>Escreva uma mensagem</span>
+<button type="button" id="botChatReplay" aria-label="Reiniciar conversa">
+<svg viewBox="0 0 256 256" aria-hidden="true"><path d="M210.3 35.9L23.9 88.4a16 16 0 00-2.6 29.8l85.4 40.1 40.1 85.4a16 16 0 0029.8-2.6L229.1 54.6a16 16 0 00-18.8-18.7z"/></svg>
+</button>
+</div>
+</div>
+<!-- ---------- texto ao lado ---------- -->
+<div class="bot-chatdemo-texto">
+<span class="bot-chatdemo-kicker">Veja na prática</span>
+<h3 class="bot-chatdemo-titulo">Do "oi" ao agendamento sem ninguém digitar</h3>
+<p class="bot-chatdemo-sub">A IA entende o contexto e responde como uma pessoa da sua equipe responderia.</p>
+<ul class="bot-chatdemo-stats">
+<li><strong>24h</strong><span>Responde fora do horário comercial</span></li>
+<li><strong>7 dias</strong><span>Por semana, sem parar</span></li>
+<li><strong>30 dias</strong><span>No mês, todo mês</span></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ======================================== -->
+<!-- COMO FUNCIONA -->
+<!-- ======================================== -->
+<section class="bot-section bot-section-alt" id="como-funciona">
+<div class="container">
+<div class="bot-section-header">
+<h2>Conectando seu <span>Chatbot IA</span> em 4 passos</h2>
+<p>Sem programação, sem complicação. Nossa equipe cuida da configuração para você.</p>
+</div>
+<div class="bot-steps-grid">
+<div class="bot-step bot-step-azul bot-reveal">
+<div class="bot-step-num">1</div>
+<h3>Conecte seu WhatsApp</h3>
+<p>Ligamos a IA ao número que você já usa para atender seus clientes.</p>
+</div>
+<div class="bot-step bot-step-azul bot-reveal">
+<div class="bot-step-num">2</div>
+<h3>Treinamos a IA</h3>
+<p>Enviamos seu catálogo, preços e regras. A IA aprende a falar do seu jeito.</p>
+</div>
+<div class="bot-step bot-step-azul bot-reveal">
+<div class="bot-step-num">3</div>
+<h3>Ela atende e vende</h3>
+<p>Sua IA responde, tira dúvidas, agenda e vende sozinha, 24 horas por dia. Ela ainda manda artes da sua loja em imagem, deixando a conversa mais fluida.</p>
+</div>
+<div class="bot-step bot-step-azul bot-reveal">
+<div class="bot-step-num">4</div>
+<h3>Você acompanha tudo</h3>
+<p>Veja conversas e resultados em tempo real pelo painel administrativo.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- ======================================== -->
+<!-- STATS BAR -->
+<!-- ======================================== -->
+<section class="bot-stats-bar">
+<div class="container">
+<div class="bot-stat-item"><strong><span class="bot-contador" data-alvo="120" data-prefixo="+">0</span></strong><span>Negócios automatizados</span></div>
+<div class="bot-stat-item"><strong><span class="bot-contador" data-alvo="2" data-sufixo="min">0</span></strong><span>Para configurar sua IA</span></div>
+<div class="bot-stat-item"><strong><span class="bot-contador" data-alvo="98" data-sufixo="%">0</span></strong><span>Satisfação dos clientes</span></div>
+<div class="bot-stat-item"><strong><span class="bot-contador" data-alvo="0">0</span></strong><span>Mensagem perdida</span></div>
+</div>
+</section>
+
+<!-- ======================================== -->
+<!-- PARA QUEM É - CARROSSEL INFINITO         -->
+<!-- ======================================== -->
+<section class="bot-section bot-section-alt" id="segmentos">
+<div class="container">
+<div class="bot-section-header">
+<h2>Automação que se adapta ao <span>seu segmento</span></h2>
+<p>Se o seu negócio atende por WhatsApp, a IA da Celly Automação pode vender por você.</p>
+</div>      
+<!-- CARROSSEL INFINITO -->
+<div class="bot-carrossel-wrapper">
+<div class="bot-carrossel-track" id="botCarrosselTrack">
+<!-- Os itens serão duplicados via JavaScript para efeito infinito -->
+</div>
+</div>
+</div>
+</section>
+
+<!-- ======================================== -->
+<!-- PLANOS -->
+<!-- ======================================== -->
+<section class="bot-section" id="planos">
+<div class="container">
+<div class="bot-section-header">
+<span class="bot-badge">💎 Escolha o plano</span>
+<h2>Planos de <span>automação</span> para todo tamanho de negócio</h2>
+<p>Comece com a IA essencial e evolua conforme sua operação cresce.</p>
+</div>
+
+<div class="bot-planos-tabs">
+<button class="bot-planos-tab active" data-plano="mensal">Mensal</button>
+<button class="bot-planos-tab" data-plano="anual">Anual <span class="bot-planos-desconto">-15%</span></button>
+</div>
+
+<!-- MENSAL -->
+<div class="bot-planos-grid active" id="botPlanosMensal">
+<!-- ESSENCIAL -->
+<div class="bot-plano-card bot-plano-essencial">
+<div class="bot-plano-header">
+<span class="bot-plano-badge">ESSENCIAL</span>
+<div class="bot-plano-preco">
+<span class="bot-plano-moeda">R$</span>
+<span class="bot-plano-valor">197</span>
+<span class="bot-plano-periodo">/mês</span>
+</div>
+</div>
+<p class="bot-plano-desc">Ideal para quem está começando a automatizar o atendimento.</p>
+<ul class="bot-plano-features">
+<li><i class="fas fa-check"></i> IA no WhatsApp</li>
+<li><i class="fas fa-check"></i> Respostas automáticas 24/7</li>
+<li><i class="fas fa-check"></i> Até 500 conversas/mês</li>
+<li><i class="fas fa-check"></i> Catálogo de produtos</li>
+<li><i class="fas fa-check"></i> Suporte por e-mail</li>
+</ul>
+<a href="#contato" class="btn-bot-plano">Contratar agora</a>
+</div>
+<!-- PROFISSIONAL -->
+<div class="bot-plano-card bot-plano-destaque">
+<div class="bot-plano-header">
+<span class="bot-plano-badge">PROFISSIONAL</span>
+<div class="bot-plano-preco">
+<span class="bot-plano-moeda">R$</span>
+<span class="bot-plano-valor">397</span>
+<span class="bot-plano-periodo">/mês</span>
+</div>
+</div>
+<p class="bot-plano-desc">O mais escolhido por negócios que querem vender no automático.</p>
+<ul class="bot-plano-features">
+<li><i class="fas fa-check"></i> Tudo do Essencial</li>
+<li><i class="fas fa-check"></i> Conversas ilimitadas</li>
+<li><i class="fas fa-check"></i> Recuperação de carrinho</li>
+<li><i class="fas fa-check"></i> Agendamentos automáticos</li>
+<li><i class="fas fa-check"></i> Integração Instagram</li>
+<li><i class="fas fa-check"></i> Relatórios de desempenho</li>
+<li><i class="fas fa-check"></i> Suporte prioritário</li>
+</ul>
+<a href="#contato" class="btn-bot-plano">Contratar agora</a>
+</div>
+</div>
+
+<!-- ANUAL -->
+<div class="bot-planos-grid" id="botPlanosAnual">
+<!-- ESSENCIAL -->
+<div class="bot-plano-card bot-plano-essencial">
+<div class="bot-plano-header">
+<span class="bot-plano-badge">ESSENCIAL</span>
+<div class="bot-plano-preco">
+<span class="bot-plano-moeda">R$</span>
+<span class="bot-plano-valor">167</span>
+<span class="bot-plano-periodo">/mês</span>
+</div>
+</div>
+<p class="bot-plano-desc">Ideal para quem está começando a automatizar o atendimento.</p>
+<ul class="bot-plano-features">
+<li><i class="fas fa-check"></i> IA no WhatsApp</li>
+<li><i class="fas fa-check"></i> Respostas automáticas 24/7</li>
+<li><i class="fas fa-check"></i> Até 500 conversas/mês</li>
+<li><i class="fas fa-check"></i> Catálogo de produtos</li>
+<li><i class="fas fa-check"></i> Suporte por e-mail</li>
+</ul>
+<a href="#contato" class="btn-bot-plano">Contratar agora</a></div>
+<!-- PROFISSIONAL -->
+<div class="bot-plano-card bot-plano-destaque">
+<div class="bot-plano-header">
+<span class="bot-plano-badge">PROFISSIONAL</span>
+<div class="bot-plano-preco">
+<span class="bot-plano-moeda">R$</span>
+<span class="bot-plano-valor">337</span>
+<span class="bot-plano-periodo">/mês</span>
+</div>
+</div>
+<p class="bot-plano-desc">O mais escolhido por negócios que querem vender no automático.</p>
+<ul class="bot-plano-features">
+<li><i class="fas fa-check"></i> Tudo do Essencial</li>
+<li><i class="fas fa-check"></i> Conversas ilimitadas</li>
+<li><i class="fas fa-check"></i> Recuperação de carrinho</li>
+<li><i class="fas fa-check"></i> Agendamentos automáticos</li>
+<li><i class="fas fa-check"></i> Integração Instagram</li>
+<li><i class="fas fa-check"></i> Relatórios de desempenho</li>
+<li><i class="fas fa-check"></i> Suporte prioritário</li>
+</ul>
+<a href="#contato" class="btn-bot-plano">Contratar agora</a></div>
+</div>
+</div>
+</section>
+
+<!-- ======================================== -->
+<!-- DEPOIMENTOS                              -->
+<!-- ======================================== -->
+<section class="bot-section bot-depoimentos-section">
+<div class="container">
+<div class="bot-section-header">
+<h2>Negócios que já <span>vendem no automático</span></h2>
+</div>
+<div class="bot-depoimentos-grid">
+<div class="bot-depoimento-card">
+<div class="bot-depoimento-estrelas">★★★★★</div>
+<p>"A IA responde meus clientes mais rápido que eu conseguiria. As vendas à noite triplicaram."</p>
+<div class="bot-depoimento-autor">
+<div class="bot-depoimento-avatar">R</div>
+<div><strong>Rafael M.</strong><span>Loja de suplementos</span></div>
+</div>
+</div>
+<div class="bot-depoimento-card">
+<div class="bot-depoimento-estrelas">★★★★★</div>
+<p>"Reduzimos o tempo de resposta de horas para segundos. Os clientes elogiam o atendimento."</p>
+<div class="bot-depoimento-autor">
+<div class="bot-depoimento-avatar">C</div>
+<div><strong>Carla S.</strong><span>Clínica de estética</span></div>
+</div>
+</div>
+<div class="bot-depoimento-card">
+<div class="bot-depoimento-estrelas">★★★★★</div>
+<p>"A recuperação de carrinho sozinha já pagou a mensalidade várias vezes. Recomendo muito."</p>
+<div class="bot-depoimento-autor">
+<div class="bot-depoimento-avatar">J</div>
+<div><strong>João P.</strong><span>E-commerce de moda</span></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ======================================== -->
+<!-- FAQ -->
+<!-- ======================================== -->
+<section class="bot-section" id="faq">
+<div class="container">
+<div class="bot-section-header">
+
+<h2>Perguntas <span>frequentes</span></h2>
+</div>
+<div class="bot-faq-grid">
+<div class="bot-faq-item">
+<button class="bot-faq-btn">Preciso saber programar para usar?<span class="bot-faq-toggle">+</span></button>
+<div class="bot-faq-content"><p>Não! Nossa equipe configura e treina toda a IA para você. Você só precisa aprovar as respostas.</p></div>
+</div>
+<div class="bot-faq-item">
+<button class="bot-faq-btn">A IA substitui totalmente o atendimento humano?<span class="bot-faq-toggle">+</span></button>
+<div class="bot-faq-content"><p>Ela cuida do atendimento inicial, dúvidas e vendas simples. Casos mais complexos podem ser transferidos para um humano a qualquer momento.</p></div>
+</div>
+<div class="bot-faq-item">
+<button class="bot-faq-btn">Funciona no meu número de WhatsApp atual?<span class="bot-faq-toggle">+</span></button>
+<div class="bot-faq-content"><p>Sim! Conectamos a automação diretamente ao número que você já usa, sem precisar trocar de número.</p></div>
+</div>
+<div class="bot-faq-item">
+<button class="bot-faq-btn">Consigo cancelar quando quiser?<span class="bot-faq-toggle">+</span></button>
+<div class="bot-faq-content"><p>Sim, sem multa e sem fidelidade. Você pode cancelar quando quiser.</p></div>
+</div>
+<div class="bot-faq-item">
+<button class="bot-faq-btn">Quanto tempo leva para a IA ficar pronta?<span class="bot-faq-toggle">+</span></button>
+<div class="bot-faq-content"><p>Em média 2 dias úteis após o envio das informações do seu negócio, dependendo da complexidade.</p></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ======================================== -->
+<!-- CTA FINAL / FORMULÁRIO -->
+<!-- ======================================== -->
+<section class="bot-cta-section" id="contato">
+<div class="container">
+<div class="bot-cta-grid">
+<div class="bot-cta-texto">
+<h2>Pronto para vender no automático?</h2>
+<p>Fale com nossa equipe e veja uma demonstração gratuita da IA funcionando no seu WhatsApp.</p>
+<ul class="bot-cta-lista">
+<li><i class="fas fa-check-circle"></i> Configuração feita pela nossa equipe</li>
+<li><i class="fas fa-check-circle"></i> Sem fidelidade, cancele quando quiser</li>
+<li><i class="fas fa-check-circle"></i> Suporte humano sempre que precisar</li>
+</ul>
+</div>
+<div class="bot-cta-form">
+<h3>Preencha esse formulário para começar seu chatbot</h3>
+<p>Preencha e um especialista fala com você em minutos.</p>
+<form id="botCtaForm">
+<div class="bot-form-group"><input type="text" placeholder="Seu nome" required></div>
+<div class="bot-form-group"><input type="text" placeholder="Nome do negócio" required></div>
+<div class="bot-form-group">
+<select required>
+<option value="" disabled selected>Qual seu segmento?</option>
+<option value="restaurante">Restaurante / Delivery</option>
+<option value="ecommerce">E-commerce</option>
+<option value="clinica">Clínica / Consultório</option>
+<option value="imobiliaria">Imobiliária</option>
+<option value="servicos">Prestação de serviços</option>
+<option value="outro">Outro</option>
+</select>
+</div>
+<div class="bot-form-group"><input type="tel" placeholder="Seu WhatsApp" required></div>
+<div class="bot-form-group"><input type="email" placeholder="Seu e-mail" required></div>
+<button type="submit" class="btn-bot-form-submit"> Quero minha demonstração</button>
+</form>
+<p class="bot-form-termos">Ao prosseguir você concorda com os <a href="#">termos de uso</a>.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ======================================== -->
+<!-- FOOTER -->
+<!-- ======================================== -->
+<footer class="bot-footer">
+<div class="container">
+<div class="bot-footer-grid">
+<div>
+<a href="#home" class="bot-footer-logo">
+<img src="portifolio-img/img/logo celly1.png" alt="Celly Automação">
+</a>
+<p class="bot-footer-desc">Automação inteligente com IA para negócios que querem vender mais, atendendo melhor.</p>
+</div>
+<div>
+<h4>Navegação</h4>
+<ul class="bot-footer-links">
+<li><a href="#home">Início</a></li>
+<li><a href="#recursos">Recursos</a></li>
+<li><a href="#planos">Planos</a></li>
+<li><a href="#faq">Dúvidas</a></li>
+</ul>
+</div>
+<div>
+<h4>Outros produtos Celly</h4>
+<ul class="bot-footer-links">
+<li><a href="index.html" target="_blank" rel="noopener">Sistema para bares e restaurantes</a></li>
+<li><a href="index.html#cardapio" target="_blank" rel="noopener">Cardápio digital</a></li>
+<li><a href="index.html#kds" target="_blank" rel="noopener">KDS - Cozinha</a></li>
+</ul>
+</div>
+<div>
+<h4>Contato</h4>
+<ul class="bot-footer-links">
+<li><i class="fas fa-phone"></i> (+55) 21 96672-9503</li>
+<li><i class="fas fa-envelope"></i> cellysistemas@gmail.com</li>
+<li><i class="fas fa-clock"></i> Atendimento 24/7</li>
+</ul>
+</div>
+</div>
+<div class="bot-footer-bottom">
+<p>&copy; 2026 <strong>Celly Automação</strong> - Todos os direitos reservados.</p>
+<div class="bot-footer-social">
+<a href="https://www.instagram.com/cellysistemas" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+<a href="https://www.facebook.com/profile.php?id=61593501004773&locale=pt_BR" target="_blank" rel="noopener"><i class="fab fa-facebook"></i></a>
+<a href="https://wa.me/5521966729503?text=Ol%C3%A1!%20Posso%20saber%20mais%20sobre%20a%20Celly%20Sistemas%3F" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
+</div>
+</div>
+</div>
+</footer>
+
+<!-- ======================================== -->
+<!-- CHAT DEMO FLUTUANTE -->
+<!-- ======================================== -->
+<div class="bot-chat-float">
+<button class="bot-chat-toggle" id="botChatToggle" aria-label="Testar a IA agora"><img src="portifolio-img/img/robozinho-ia.png" alt="" class="bot-chat-toggle-robo"></button>
+<div class="bot-chat-window" id="botChatWindow">
+<div class="bot-chat-header">
+<div class="bot-chat-header-info">
+<div class="bot-chat-msg-avatar" style="background:rgba(255,255,255,0.2);color:#fff;"><i class="fas fa-robot"></i></div>
+<div><strong>IA Celly Automação</strong><span>🟢 Online agora</span></div>
+</div>
+<button class="bot-chat-close" id="botChatClose"><i class="fas fa-times"></i></button>
+</div>
+<div class="bot-chat-messages" id="botChatMessages">
+<div class="bot-chat-msg">
+<div class="bot-chat-msg-avatar"><i class="fas fa-robot"></i></div>
+<p>Olá! 👋 Eu sou a IA da Celly Automação. Quer ver como eu atendo e vendo por um negócio 24h por dia?</p>
+</div>
+</div>
+<div class="bot-chat-options">
+<button class="bot-chat-option" data-pergunta="planos">💎 Planos</button>
+<button class="bot-chat-option" data-pergunta="funciona">🤖 Como funciona</button>
+<button class="bot-chat-option" data-pergunta="demo">🎥 Quero demo</button>
+<button class="bot-chat-option" data-pergunta="contato">📞 Falar com humano</button>
+</div>
+<div style="display:flex;gap:8px;padding:12px 16px;border-top:1px solid var(--cinza-borda);">
+<input type="text" id="botChatInput" placeholder="Digite sua mensagem..." style="flex:1;border:1px solid var(--cinza-borda);border-radius:20px;padding:9px 14px;font-family:var(--font);font-size:0.85rem;">
+<button id="botChatSend" style="background:var(--roxo);color:#fff;border:none;width:38px;border-radius:50%;cursor:pointer;"><i class="fas fa-paper-plane"></i></button>
+</div>
+</div>
+</div>
+
+<script src="automacao-chatbot.js?v=2"></script>
+</body>
+</html>

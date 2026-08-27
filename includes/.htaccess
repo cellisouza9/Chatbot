@@ -1,0 +1,31 @@
+# ============================================
+# PROTEÇÃO DO DIRETÓRIO DE LOGS
+# ============================================
+<Directory "logs">
+    Require all denied
+</Directory>
+
+<Directory "includes">
+    Require all denied
+</Directory>
+
+# ============================================
+# PROTEÇÃO CONTRA ATAQUES
+# ============================================
+# Forçar HTTPS (se tiver SSL)
+# RewriteEngine On
+# RewriteCond %{HTTPS} off
+# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Prevenir listagem de diretórios
+Options -Indexes
+
+# Proteger contra acesso a arquivos sensíveis
+<FilesMatch "\.(env|ini|log|sql|bak|sh|json)$">
+    Require all denied
+</FilesMatch>
+
+# Proteger o arquivo .htaccess
+<Files ".htaccess">
+    Require all denied
+</Files>
