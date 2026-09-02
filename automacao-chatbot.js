@@ -136,6 +136,8 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+
+    
     // ============================================
     // CARROSSEL INFINITO (SEGMENTOS)
     // ============================================
