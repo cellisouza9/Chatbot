@@ -2376,7 +2376,7 @@ section { position: relative; }
 }
 .bot-conhecimento-texto h2 span { color: var(--roxo-escuro); }
 .bot-conhecimento-texto > p {
-  color: var(--cinza-texto);
+  color: #000;
   font-size: 1rem;
   line-height: 1.6;
   margin-bottom: 28px;
@@ -2406,7 +2406,7 @@ section { position: relative; }
 }
 .bot-conhecimento-lista li span {
   font-size: 0.85rem;
-  color: var(--cinza-texto);
+  color: #000;
 }
 .bot-conhecimento-icon {
   flex-shrink: 0;
@@ -2489,7 +2489,7 @@ section { position: relative; }
 }
 .bot-conhecimento-card-head-texto p {
   font-size: 0.85rem;
-  color: var(--cinza-texto);
+  color: #000;
 }
 .bot-conhecimento-ok {
   flex-shrink: 0;
@@ -2526,7 +2526,7 @@ section { position: relative; }
   margin-bottom: 6px;
 }
 .bot-conhecimento-dropzone p {
-  color: var(--cinza-texto);
+  color: #000;
   font-size: 0.85rem;
   margin-bottom: 18px;
 }
@@ -2584,7 +2584,7 @@ section { position: relative; }
 }
 .bot-conhecimento-fonte span {
   font-size: 0.65rem;
-  color: var(--cinza-texto);
+  color: #000;
   word-break: break-word;
 }
 .bot-conhecimento-fonte em {
@@ -2627,7 +2627,7 @@ section { position: relative; }
 }
 .bot-conhecimento-sucesso-texto span {
   font-size: 0.8rem;
-  color: var(--cinza-texto);
+  color: #000;
 }
 .btn-bot-conhecimento {
   flex-shrink: 0;
@@ -2704,7 +2704,7 @@ section { position: relative; }
 }
 .bot-conhecimento-rodape-principal p {
   font-size: 0.85rem;
-  color: var(--cinza-texto);
+  color: #000;
   line-height: 1.5;
   margin: 0;
 }
@@ -2722,7 +2722,7 @@ section { position: relative; }
 }
 .bot-conhecimento-rodape-item span {
   font-size: 0.82rem;
-  color: var(--cinza-texto);
+  color: #000;
 }
 
 /* ----- responsivo ----- */
