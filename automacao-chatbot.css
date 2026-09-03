@@ -2097,3 +2097,239 @@ section { position: relative; }
 @media (max-width:480px){
   .bot-chatdemo-phone{height:520px}
 }
+
+/* ============================================ */
+/* PLANOS - ESTILO HOSTGATOR                    */
+/* ============================================ */
+
+.planos-section {
+  padding: 80px 0;
+  background: #FAF9FE;
+}
+
+.planos-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 50px;
+}
+
+.planos-header .eyebrow {
+  display: inline-block;
+  background: #EDE9FE;
+  color: #5B21B6;
+  padding: 6px 18px;
+  border-radius: 40px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.planos-header h2 {
+  font-size: clamp(30px, 4vw, 44px);
+  font-weight: 800;
+  color: #110C1C;
+  margin-top: 12px;
+}
+
+.planos-header p {
+  font-size: 18px;
+  color: #4B4654;
+}
+
+.planos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ===== CARD DO PLANO ===== */
+.plano-card {
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 20px;
+  padding: 32px 24px;
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.plano-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(91, 33, 182, 0.08);
+  border-color: #C4B5FD;
+}
+
+/* ===== CARD DESTAQUE ===== */
+.plano-card.destaque {
+  border: 2px solid #5B21B6;
+  box-shadow: 0 20px 50px rgba(91, 33, 182, 0.12);
+}
+
+.plano-card.destaque:hover {
+  border-color: #5B21B6;
+  box-shadow: 0 24px 60px rgba(91, 33, 182, 0.18);
+}
+
+/* ===== BADGE ===== */
+.plano-badge {
+  display: inline-block;
+  background: #F3F4F6;
+  color: #4B5563;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 16px;
+  border-radius: 40px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.plano-badge.destaque-badge {
+  background: linear-gradient(135deg, #5B21B6, #7C3AED);
+  color: #fff;
+}
+
+/* ===== NOME E DESCRIÇÃO ===== */
+.plano-nome {
+  font-size: 24px;
+  font-weight: 800;
+  color: #110C1C;
+  margin: 12px 0 6px;
+}
+
+.plano-desc {
+  font-size: 14px;
+  color: #4B4654;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  min-height: 42px;
+}
+
+/* ===== PREÇOS ===== */
+.plano-preco-antigo {
+  font-size: 16px;
+  color: #9CA3AF;
+  text-decoration: line-through;
+}
+
+.plano-desconto {
+  display: inline-block;
+  background: #FEE2E2;
+  color: #DC2626;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 2px 12px;
+  border-radius: 20px;
+  margin: 4px 0 8px;
+}
+
+.plano-preco {
+  font-size: 48px;
+  font-weight: 900;
+  color: #5B21B6;
+  line-height: 1;
+}
+
+.plano-preco-detalhe {
+  font-size: 14px;
+  color: #4B4654;
+  margin-bottom: 4px;
+}
+
+.plano-preco-anual {
+  font-size: 14px;
+  color: #4B4654;
+  background: #F3F4F6;
+  padding: 8px 12px;
+  border-radius: 10px;
+  margin: 8px 0 16px;
+}
+
+/* ===== BENEFÍCIOS ===== */
+.plano-beneficios {
+  list-style: none;
+  text-align: left;
+  padding: 0;
+  margin: 0 0 24px 0;
+}
+
+.plano-beneficios li {
+  font-size: 14px;
+  color: #1F2937;
+  padding: 6px 0;
+  border-bottom: 1px solid #F3F4F6;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.plano-beneficios li:last-child {
+  border-bottom: none;
+}
+
+/* ===== BOTÃO ===== */
+.btn-plano {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 14px 20px;
+  background: #F3F4F6;
+  color: #1F2937;
+  border-radius: 40px;
+  font-weight: 700;
+  font-size: 15px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-plano:hover {
+  background: #E5E7EB;
+  transform: translateY(-2px);
+}
+
+.btn-destaque {
+  background: linear-gradient(135deg, #5B21B6, #7C3AED);
+  color: #fff;
+  box-shadow: 0 8px 24px rgba(91, 33, 182, 0.25);
+}
+
+.btn-destaque:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(91, 33, 182, 0.35);
+  background: linear-gradient(135deg, #4C1D95, #6D28D9);
+}
+
+/* ============================================ */
+/* RESPONSIVO - PLANOS                          */
+/* ============================================ */
+
+@media (max-width: 1024px) {
+  .planos-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .planos-grid {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+  }
+  .plano-card {
+    padding: 24px 18px;
+  }
+  .plano-preco {
+    font-size: 38px;
+  }
+  .planos-header h2 {
+    font-size: 26px;
+  }
+  .planos-header p {
+    font-size: 15px;
+  }
+}
