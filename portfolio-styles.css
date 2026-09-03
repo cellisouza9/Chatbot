@@ -9,12 +9,14 @@
 /* ============================================ */
 .reveal {
   opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
+  transform: translateY(8px);
+  transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  will-change: opacity, transform;
 }
 .reveal.is-visible {
   opacity: 1;
   transform: translateY(0);
+  will-change: auto;
 }
 @media (prefers-reduced-motion: reduce) {
   .reveal {
@@ -276,6 +278,101 @@ h1 strong { color: #5b21b6; }
   margin-bottom: 12px;
 }
 .section-head p { color: #4b4654; }
+
+/* showcase "quantos clientes você perdeu" - dentro de #solucoes */
+.aicare-showcase {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  background: #fff;
+  border: 1px solid #e9e3f4;
+  border-radius: 24px;
+  padding: 40px;
+  margin-bottom: 50px;
+  box-shadow: 0 20px 40px rgba(17,12,28,0.06);
+}
+.aicare-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #f3ecfc;
+  color: #5b21b6;
+  font: 600 13px/1 'Inter', sans-serif;
+  padding: 8px 16px;
+  border-radius: 999px;
+  margin-bottom: 16px;
+}
+.aicare-title {
+  font-size: clamp(22px, 2.6vw, 30px);
+  line-height: 1.25;
+  letter-spacing: -0.5px;
+  margin: 0 0 12px;
+  color: #1b1233;
+}
+.aicare-sub { color: #4b4654; font-size: 15.5px; line-height: 1.6; margin: 0; }
+.aicare-visual {
+  position: relative;
+  background: #f5f2fc;
+  border-radius: 20px;
+  padding: 28px 24px;
+}
+.aicare-icons {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+.aicare-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: #fff;
+  box-shadow: 0 8px 16px rgba(17,12,28,0.15);
+}
+.aicare-icon-whatsapp { background: #25d366; }
+.aicare-icon-instagram { background: radial-gradient(circle at 30% 110%, #fdf497, #fd5949 40%, #d6249f 70%, #285AEB); }
+.aicare-icon-messenger { background: #0084ff; }
+.aicare-icon-mail { background: #5b21b6; }
+.aicare-bubbles {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.aicare-bubble {
+  max-width: 88%;
+  padding: 12px 16px;
+  border-radius: 16px;
+  font: 400 14px/1.5 'Inter', sans-serif;
+}
+.aicare-bubble.client {
+  align-self: flex-end;
+  background: #d9f8df;
+  color: #14532d;
+  border-bottom-right-radius: 4px;
+}
+.aicare-bubble.bot {
+  align-self: flex-start;
+  background: #fff;
+  color: #1b1233;
+  border-bottom-left-radius: 4px;
+  box-shadow: 0 4px 10px rgba(17,12,28,0.08);
+}
+.aicare-tag {
+  display: block;
+  text-align: center;
+  margin-top: 18px;
+  font: 600 12.5px/1 'Inter', sans-serif;
+  color: #5b21b6;
+}
+@media (max-width: 860px) {
+  .aicare-showcase { grid-template-columns: 1fr; padding: 28px; }
+}
+
 .cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);

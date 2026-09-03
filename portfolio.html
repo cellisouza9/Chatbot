@@ -63,6 +63,23 @@
         <div class="card"><div class="icon"><i class="fas fa-puzzle-piece"></i></div><h3>Soluções sob medida</h3><p><strong style="color:#000;">Nada de pacote fechado. Adaptado ao seu segmento, do cardápio digital ao atendimento por IA.</strong></p></div>
         <div class="card"><div class="icon"><i class="fas fa-cloud-upload-alt"></i></div><h3>Integração total</h3><p><strong style="color:#000;">CRM, planilhas, e-mail, redes, bancos — tudo conectado em fluxos que funcionam 24/7.</strong></p></div>
       </div>
+      <div class="aicare-showcase">
+        <div class="aicare-text">
+          <span class="aicare-badge"><i class="fas fa-bolt"></i> Atendimento 24/7</span>
+          <h3 class="aicare-title">Quantos clientes você perdeu porque demorou pra responder? <span style="color:#5b21b6;">Nossa IA responde em segundos.</span></h3>
+          <p class="aicare-sub">Elimine filas, acelere vendas e atenda 24/7 com agentes inteligentes que não tiram férias, não erram e resolvem sem pausa.</p>
+        </div>
+        <div class="aicare-visual">
+          <div class="aicare-icons">
+            <span class="aicare-icon aicare-icon-whatsapp"><i class="fab fa-whatsapp"></i></span>
+          </div>
+          <div class="aicare-bubbles">
+            <div class="aicare-bubble client">Obrigada! Curti muito o atendimento, foi bem fácil de entender e realmente me ajudou com minhas dúvidas sobre a plataforma.</div>
+            <div class="aicare-bubble bot">Oi Amanda! Que bom que conseguimos resolver seu problema! Posso te ajudar com mais alguma coisa? <i class="fas fa-wand-magic-sparkles"></i></div>
+          </div>
+          <span class="aicare-tag">Respostas rápidas e humanizadas</span>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -531,13 +548,18 @@
   document.addEventListener('DOMContentLoaded', function () {
     var seletores = [
       '.section-head', '.card', '.service', '.delivery-card', '.step',
-      '.sites-print-container', '.visual-box', '.cta-box',
+      '.sites-print-container', '.visual-box', '.cta-box', '.aicare-showcase',
       '.chatbot-visual-wrapper', '.chatbot-preview-item', '.footer-grid > div',
       '#sites .container > div > div', '#comparativo .comparativo-grid > div',
       '.bot-chatdemo'
     ].join(', ');
 
-    var alvos = document.querySelectorAll(seletores);
+    var alvosBrutos = Array.prototype.slice.call(document.querySelectorAll(seletores));
+    // remove elementos aninhados (pai e filho batendo os dois na lista) pra não
+    // duplicar a animação e "sobrepor" um no outro durante o scroll
+    var alvos = alvosBrutos.filter(function (el) {
+      return !alvosBrutos.some(function (outro) { return outro !== el && outro.contains(el); });
+    });
 
     if (!('IntersectionObserver' in window)) {
       // navegador antigo: mostra tudo direto, sem animação
@@ -552,11 +574,22 @@
           observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+    }, { threshold: 0.15, rootMargin: '0px 0px -80px 0px' });
 
-    alvos.forEach(function (el, i) {
+    // cada seção tem seu próprio "id de animação" (contador de atraso reiniciado
+    // por seção), assim o stagger não desalinha quando o cliente desce a página
+    var gruposDelay = new WeakMap();
+    var grupoSeq = 0;
+    alvos.forEach(function (el) {
+      var grupo = el.closest('section') || document.body;
+      if (!gruposDelay.has(grupo)) {
+        gruposDelay.set(grupo, { id: 'reveal-grupo-' + (grupoSeq++), i: 0 });
+      }
+      var info = gruposDelay.get(grupo);
+      el.dataset.revealId = info.id + '-' + info.i;
       el.classList.add('reveal');
-      el.style.transitionDelay = (i % 4) * 0.08 + 's';
+      el.style.transitionDelay = (info.i % 4) * 0.08 + 's';
+      info.i++;
       observer.observe(el);
     });
   });
