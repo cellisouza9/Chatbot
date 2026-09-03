@@ -2316,12 +2316,33 @@ section { position: relative; }
 }
 
 @media (max-width: 768px) {
+  /* planos lado a lado, arrasta com o dedo (touch) em vez de empilhar com scroll */
   .planos-grid {
-    grid-template-columns: 1fr;
-    max-width: 420px;
+    display: flex;
+    grid-template-columns: none;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 16px;
+    max-width: 100%;
+    padding: 6px 24px 20px;
+    margin: 0 -24px;
+    /* esconde a barra de scroll, mas mantém o arrastar com o dedo */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .planos-grid::-webkit-scrollbar {
+    display: none;
   }
   .plano-card {
     padding: 24px 18px;
+    min-width: 80%;
+    flex-shrink: 0;
+    scroll-snap-align: center;
+  }
+  .plano-card.destaque:hover,
+  .plano-card:hover {
+    transform: none;
   }
   .plano-preco {
     font-size: 38px;
