@@ -2097,7 +2097,7 @@ section { position: relative; }
   color:var(--roxo, #7C3AED);
 }
 .bot-chatdemo-titulo{margin:0;font:700 36px/1.2 'Montserrat',sans-serif;color:#1b1233}
-.bot-chatdemo-sub{margin:0;font:400 17px/1.6 'Montserrat',sans-serif;color:#5b5570}
+.bot-chatdemo-sub{margin:0;font:400 17px/1.6 'Montserrat',sans-serif;color:#000}
 
 /* funil de conversão */
 .bot-chatdemo-funil{display:flex;flex-direction:column;gap:10px;max-width:420px}
