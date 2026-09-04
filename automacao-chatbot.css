@@ -1934,6 +1934,7 @@ section { position: relative; }
 /* ---------- celular ---------- */
 .bot-chatdemo-phone{
   --roxo: #8B21B6; /* recolore só essa área (avatar, balões enviados, ícones) */
+  position:relative;
   width:100%;
   height:760px;
   margin-left:-40px;
@@ -1941,30 +1942,53 @@ section { position: relative; }
   display:flex;
   flex-direction:column;
   background:#fff;
-  border:2px solid #000;
-  border-radius:30px;
+  border:10px solid #111827;
+  border-radius:44px;
   overflow:hidden;
-  box-shadow:0 20px 44px rgba(139,33,182,.20);
+  box-shadow:0 30px 60px rgba(91,33,182,.18), 0 8px 20px rgba(15,23,42,.12);
 }
+.bot-chatdemo-phone::before{
+  content:'';
+  position:absolute;
+  top:0;
+  left:50%;
+  transform:translateX(-50%);
+  width:120px;
+  height:22px;
+  background:#111827;
+  border-radius:0 0 16px 16px;
+  z-index:5;
+}
+
+.bot-chatdemo-statusbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:12px 22px 2px;
+  background:#fff;
+  font:700 12.5px/1 'Montserrat',sans-serif;
+  color:#0F172A;
+}
+.bot-chatdemo-status-icons{display:flex;gap:5px;font-size:10.5px;color:#0F172A}
 
 .bot-chatdemo-header{
   display:flex;
   align-items:center;
   gap:10px;
-  padding:14px;
-  background:#C9AEE8;
-  border-bottom:3px solid #000;
+  padding:10px 16px 14px;
+  background:#fff;
+  border-bottom:1px solid #ECE7F6;
 }
 .bot-chatdemo-avatar{
   width:34px;height:34px;flex:none;
   border-radius:50%;
-  background:var(--roxo, #7C3AED);
+  background:linear-gradient(135deg,#6D28D9,var(--roxo, #7C3AED));
   color:#fff;
   display:flex;align-items:center;justify-content:center;
   font:500 14px/1 'Montserrat',sans-serif;
 }
 .bot-chatdemo-ident{display:flex;flex-direction:column;gap:1px;flex:1;min-width:0}
-.bot-chatdemo-nome{font:600 14px/1.2 'Montserrat',sans-serif;color:#4A0E5C}
+.bot-chatdemo-nome{font:600 14px/1.2 'Montserrat',sans-serif;color:#0F172A}
 .bot-chatdemo-status{display:flex;align-items:center;gap:5px;font:400 10.5px/1 'Montserrat',sans-serif;color:#6b7280}
 .bot-chatdemo-status i{width:5px;height:5px;border-radius:50%;background:#22c55e}
 .bot-chatdemo-hicon{width:16px;height:16px;fill:var(--roxo, #7C3AED)}
