@@ -2747,3 +2747,158 @@ section { position: relative; }
   .bot-conhecimento-rodape-principal { flex-direction: column; text-align: center; }
   .bot-conhecimento-rodape-item { border-left: none; padding-left: 0; border-top: 1px solid rgba(124, 58, 237, 0.2); padding-top: 16px; }
 }
+
+/* ============================================ */
+/* SUA EMPRESA USANDO NOSSO AGENTE DE IA        */
+/* ============================================ */
+
+.bot-exemplos-section {
+  padding: 90px 24px;
+  background: var(--branco);
+  text-align: center;
+}
+
+.bot-exemplos-titulo {
+  font-size: 2.1rem;
+  font-weight: 800;
+  line-height: 1.25;
+  color: #0F172A;
+  max-width: 700px;
+  margin: 0 auto 56px;
+}
+.bot-exemplos-titulo span {
+  background: linear-gradient(135deg, var(--roxo-escuro), var(--roxo));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.bot-exemplos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.bot-exemplo-card { display: flex; flex-direction: column; align-items: center; }
+
+.bot-exemplo-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  border: 2px solid var(--roxo);
+  color: var(--roxo);
+  display: grid;
+  place-items: center;
+  font-size: 1.8rem;
+  margin-bottom: 16px;
+}
+
+.bot-exemplo-card h3 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--roxo-escuro);
+  margin-bottom: 8px;
+}
+
+.bot-exemplo-card > p {
+  font-size: 0.92rem;
+  color: #000;
+  line-height: 1.5;
+  max-width: 260px;
+  margin-bottom: 28px;
+}
+
+/* ----- mockup de celular ----- */
+.bot-exemplo-phone {
+  width: 280px;
+  max-width: 100%;
+  background: var(--branco);
+  border: 10px solid #111827;
+  border-radius: 36px;
+  box-shadow: var(--sombra);
+  overflow: hidden;
+  text-align: left;
+}
+
+.bot-exemplo-status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 18px 4px;
+  font: 700 12px/1 'Montserrat', sans-serif;
+  color: #0F172A;
+}
+.bot-exemplo-status-icons { display: flex; gap: 5px; font-size: 10px; color: #0F172A; }
+
+.bot-exemplo-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 14px 12px;
+  border-bottom: 1px solid var(--cinza-borda);
+}
+.bot-exemplo-avatar {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--roxo-escuro), var(--roxo));
+  color: var(--branco);
+  display: grid;
+  place-items: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+.bot-exemplo-ident { display: flex; flex-direction: column; flex: 1; min-width: 0; gap: 1px; }
+.bot-exemplo-ident strong { font: 700 13px/1.2 'Montserrat', sans-serif; color: #0F172A; }
+.bot-exemplo-ident span { font: 400 10.5px/1 'Montserrat', sans-serif; color: #6b7280; }
+.bot-exemplo-header i { color: var(--roxo); font-size: 0.85rem; }
+
+.bot-exemplo-body {
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: #F7F5FC;
+  min-height: 320px;
+}
+.bot-exemplo-msg {
+  max-width: 84%;
+  padding: 9px 12px;
+  border-radius: 14px;
+  font-size: 0.76rem;
+  line-height: 1.5;
+  position: relative;
+}
+.bot-exemplo-msg time {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.62rem;
+  opacity: 0.7;
+}
+.bot-exemplo-msg.in {
+  align-self: flex-start;
+  background: var(--branco);
+  color: #1F2937;
+  border-bottom-left-radius: 4px;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.06);
+}
+.bot-exemplo-msg.out {
+  align-self: flex-end;
+  background: linear-gradient(135deg, var(--roxo-escuro), var(--roxo));
+  color: var(--branco);
+  border-bottom-right-radius: 4px;
+}
+
+@media (max-width: 1024px) {
+  .bot-exemplos-grid { grid-template-columns: 1fr; max-width: 340px; gap: 56px; }
+}
+
+@media (max-width: 600px) {
+  .bot-exemplos-section { padding: 60px 16px; }
+  .bot-exemplos-titulo { font-size: 1.7rem; margin-bottom: 40px; }
+  .bot-exemplo-phone { width: 100%; }
+  .bot-exemplo-body { min-height: 0; }
+}
