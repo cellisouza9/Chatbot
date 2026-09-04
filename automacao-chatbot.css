@@ -2099,14 +2099,27 @@ section { position: relative; }
 .bot-chatdemo-titulo{margin:0;font:700 36px/1.2 'Montserrat',sans-serif;color:#1b1233}
 .bot-chatdemo-sub{margin:0;font:400 17px/1.6 'Montserrat',sans-serif;color:#5b5570}
 
-.bot-chatdemo-stats{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px}
-.bot-chatdemo-stats li{
-  display:flex;align-items:center;gap:10px;
-  background:#fff;border:1px solid rgba(124,58,237,.12);
-  border-radius:12px;padding:12px 14px;
+/* funil de conversão */
+.bot-chatdemo-funil{display:flex;flex-direction:column;gap:10px;max-width:420px}
+.bot-chatdemo-funil-titulo{
+  font:700 12px/1 'Montserrat',sans-serif;
+  letter-spacing:.08em;text-transform:uppercase;
+  color:#6b7280;margin-bottom:2px;
 }
-.bot-chatdemo-stats strong{font:700 15px/1 'Montserrat',sans-serif;color:var(--roxo, #7C3AED)}
-.bot-chatdemo-stats span{font:400 13.5px/1.4 'Montserrat',sans-serif;color:#3b3355}
+.bot-chatdemo-funil-etapa{
+  width:var(--largura);
+  min-width:180px;
+  display:flex;align-items:center;justify-content:space-between;gap:14px;
+  padding:13px 18px;
+  border-radius:10px;
+  transition:width .3s ease;
+}
+.bot-chatdemo-funil-etapa.etapa-1{background:#EDE9FE;color:#4C1D95}
+.bot-chatdemo-funil-etapa.etapa-2{background:#C4B5FD;color:#3b0764}
+.bot-chatdemo-funil-etapa.etapa-3{background:linear-gradient(135deg,#5B21B6,#7C3AED);color:#fff}
+.bot-chatdemo-funil-label{font:500 13.5px/1.3 'Montserrat',sans-serif}
+.bot-chatdemo-funil-num{font:800 20px/1 'Montserrat',sans-serif}
+.bot-chatdemo-funil-nota{font:400 11.5px/1.4 'Montserrat',sans-serif;color:#9ca3af;margin-top:2px}
 
 @keyframes botChatRise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
 @keyframes botChatBlink{0%,60%,100%{opacity:.25}30%{opacity:1}}
