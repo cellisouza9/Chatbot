@@ -2764,13 +2764,20 @@ section { position: relative; }
   line-height: 1.25;
   color: #0F172A;
   max-width: 700px;
-  margin: 0 auto 56px;
+  margin: 0 auto 14px;
 }
 .bot-exemplos-titulo span {
   background: linear-gradient(135deg, var(--roxo-escuro), var(--roxo));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+}
+
+.bot-exemplos-sub {
+  font-size: 1.05rem;
+  color: #000;
+  max-width: 620px;
+  margin: 0 auto 56px;
 }
 
 .bot-exemplos-img {
