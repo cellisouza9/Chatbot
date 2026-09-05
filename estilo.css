@@ -2276,6 +2276,50 @@ color: #1A5CD9;
     margin-left: auto;
 }
 
+.canais-bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px 24px;
+    max-width: 1100px;
+    margin: 40px auto 0;
+    padding: 18px 28px;
+    background: #F8F9FA;
+    border-radius: 60px;
+}
+
+.canais-titulo {
+    font-weight: 700;
+    color: var(--preto-texto);
+    font-size: 0.95rem;
+    white-space: nowrap;
+}
+
+.canais-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--preto-texto);
+    white-space: nowrap;
+}
+
+.canais-item i {
+    color: #4A7CF7;
+    font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+    .canais-bar {
+        justify-content: flex-start;
+        border-radius: 20px;
+        padding: 18px 20px;
+        margin-top: 24px;
+    }
+}
+
 .funcionalidades-cta {
     text-align: center;
     margin-top: 50px;
