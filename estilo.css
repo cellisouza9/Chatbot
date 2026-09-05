@@ -2313,10 +2313,15 @@ color: #1A5CD9;
 
 @media (max-width: 768px) {
     .canais-bar {
-        justify-content: flex-start;
+        justify-content: center;
         border-radius: 20px;
-        padding: 18px 20px;
+        padding: 20px;
         margin-top: 24px;
+        row-gap: 12px;
+    }
+    .canais-titulo {
+        width: 100%;
+        text-align: center;
     }
 }
 
