@@ -16,15 +16,15 @@
     .quiz-page { background: #f6f3fc; min-height: 100vh; }
     .quiz-header { background: #fff; border-bottom: 1px solid #ede8f7; padding: 18px 0; }
     .quiz-header .container { display: flex; align-items: center; justify-content: space-between; }
-    .quiz-header .logo img { height: 34px; }
+    .quiz-header .logo img { height: 60px; width: auto; display: block; }
     .quiz-header .back-link { color: #5b21b6; font-weight: 600; font-size: 14px; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; }
     .quiz-header .back-link:hover { color: #321c64; }
 
     .quiz-wrap { max-width: 640px; margin: 0 auto; padding: 48px 20px 80px; }
     .quiz-intro { text-align: center; margin-bottom: 28px; }
     .quiz-intro .eyebrow { display: inline-block; color: #7c3aed; font-weight: 700; font-size: 13px; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 10px; }
-    .quiz-intro h1 { font-family: 'Montserrat', sans-serif; font-size: clamp(26px, 4vw, 34px); letter-spacing: -1px; color: #14101f; margin-bottom: 10px; }
-    .quiz-intro p { color: #4a4458; font-size: 15.5px; max-width: 520px; margin: 0 auto; }
+    .quiz-intro h1 { font-family: 'Montserrat', sans-serif; font-size: clamp(26px, 4vw, 34px); letter-spacing: -1px; color: #000; margin-bottom: 10px; }
+    .quiz-intro p { color: #000; font-size: 15.5px; max-width: 520px; margin: 0 auto; }
 
     .quiz-progress { margin-bottom: 22px; }
     .quiz-progress-label { display: flex; justify-content: space-between; font-size: 13px; font-weight: 600; color: #5b21b6; margin-bottom: 8px; }
@@ -36,18 +36,18 @@
     .quiz-step.active { display: block; animation: quizFade 0.3s ease; }
     @keyframes quizFade { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
 
-    .quiz-step h2 { font-family: 'Montserrat', sans-serif; font-size: 21px; color: #14101f; margin-bottom: 6px; }
-    .quiz-step .hint { color: #8b849c; font-size: 13.5px; margin-bottom: 22px; }
+    .quiz-step h2 { font-family: 'Montserrat', sans-serif; font-size: 21px; color: #000; margin-bottom: 6px; }
+    .quiz-step .hint { color: #000; font-size: 13.5px; margin-bottom: 22px; }
 
     .quiz-field { margin-bottom: 18px; }
-    .quiz-field label { display: block; font-weight: 600; font-size: 14px; color: #2d2a3a; margin-bottom: 6px; }
+    .quiz-field label { display: block; font-weight: 600; font-size: 14px; color: #000; margin-bottom: 6px; }
     .quiz-field input[type="text"],
     .quiz-field input[type="tel"],
     .quiz-field input[type="email"],
     .quiz-field select,
     .quiz-field textarea {
       width: 100%; padding: 13px 16px; border: 1.5px solid #e2dcef; border-radius: 12px;
-      font-family: 'Inter', sans-serif; font-size: 14.5px; color: #14101f; background: #fbfaff;
+      font-family: 'Inter', sans-serif; font-size: 14.5px; color: #000; background: #fbfaff;
       transition: 0.2s;
     }
     .quiz-field input:focus, .quiz-field select:focus, .quiz-field textarea:focus {
@@ -60,7 +60,7 @@
     .quiz-option input { position: absolute; opacity: 0; }
     .quiz-option label {
       display: flex; align-items: center; gap: 12px; padding: 14px 16px; border: 1.5px solid #e2dcef;
-      border-radius: 12px; cursor: pointer; font-weight: 600; font-size: 14.5px; color: #2d2a3a;
+      border-radius: 12px; cursor: pointer; font-weight: 600; font-size: 14.5px; color: #000;
       transition: 0.2s; margin-bottom: 0;
     }
     .quiz-option label i { color: #8b5cf6; font-size: 16px; width: 20px; text-align: center; }
@@ -85,7 +85,7 @@
     .quiz-done { text-align: center; padding: 20px 0 4px; }
     .quiz-done .check { width: 64px; height: 64px; border-radius: 50%; background: #f0ecfa; color: #5b21b6; display: flex; align-items: center; justify-content: center; font-size: 28px; margin: 0 auto 18px; }
     .quiz-done h2 { margin-bottom: 10px; }
-    .quiz-done p { color: #4a4458; font-size: 15px; margin-bottom: 24px; }
+    .quiz-done p { color: #000; font-size: 15px; margin-bottom: 24px; }
     .quiz-done .wpp-link { display: inline-flex; align-items: center; gap: 8px; color: #16a34a; font-weight: 700; font-size: 14px; text-decoration: none; }
     .quiz-done .wpp-link:hover { color: #15803d; }
 
@@ -107,7 +107,7 @@
   <div class="quiz-wrap">
     <div class="quiz-intro">
       <span class="eyebrow">Vamos começar</span>
-      <h1>Conte pra gente sobre o seu projeto</h1>
+      <h1>Conte pra gente sobre a sua empresa</h1>
       <p>Leva menos de 2 minutos. Com essas informações a gente já chega na conversa do WhatsApp entendendo o que você precisa.</p>
     </div>
 
@@ -197,25 +197,14 @@
             </select>
           </div>
           <div class="quiz-field">
-            <label>Qual o tamanho do projeto que você imagina?</label>
-            <div class="quiz-options">
-              <div class="quiz-option">
-                <input type="radio" id="escopo1" name="Tamanho do projeto" value="Algo simples e básico, pra começar" required>
-                <label for="escopo1"><i class="fas fa-seedling"></i> Algo simples e básico, pra começar</label>
-              </div>
-              <div class="quiz-option">
-                <input type="radio" id="escopo2" name="Tamanho do projeto" value="Algo completo, com várias funcionalidades">
-                <label for="escopo2"><i class="fas fa-layer-group"></i> Algo completo, com várias funcionalidades</label>
-              </div>
-              <div class="quiz-option">
-                <input type="radio" id="escopo3" name="Tamanho do projeto" value="Quero o que for melhor pro meu negócio crescer">
-                <label for="escopo3"><i class="fas fa-chart-line"></i> Quero o que for melhor pro meu negócio crescer</label>
-              </div>
-              <div class="quiz-option">
-                <input type="radio" id="escopo4" name="Tamanho do projeto" value="Ainda não sei, quero orientação">
-                <label for="escopo4"><i class="fas fa-circle-question"></i> Ainda não sei, quero orientação</label>
-              </div>
-            </div>
+            <label for="escopo">Qual o tamanho do projeto que você imagina?</label>
+            <select id="escopo" name="Tamanho do projeto" required>
+              <option value="" disabled selected>Selecione uma opção</option>
+              <option value="Algo simples e básico, pra começar">Algo simples e básico, pra começar</option>
+              <option value="Algo completo, com várias funcionalidades">Algo completo, com várias funcionalidades</option>
+              <option value="Quero o que for melhor pro meu negócio crescer">Quero o que for melhor pro meu negócio crescer</option>
+              <option value="Ainda não sei, quero orientação">Ainda não sei, quero orientação</option>
+            </select>
           </div>
         </div>
 
