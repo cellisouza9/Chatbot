@@ -622,7 +622,7 @@ document.addEventListener('DOMContentLoaded', function() {
             delay: 500
         },
         'contato': {
-            texto: '📞 Quer falar com um atendente humano?<br><br>📱 WhatsApp: (00) 00000-0000<br>📧 E-mail: contato@m33sistemas.com<br><br>⏰ Atendimento: 24/7',
+            texto: '📞 Quer falar com um atendente humano?<br><br><a href="https://wa.me/5521966729503" target="_blank" rel="noopener" class="chatbot-wa-link"><i class="fab fa-whatsapp"></i> Conversar no WhatsApp</a><br><br>📧 E-mail: contato@cellysistemas.com<br>⏰ Atendimento: 24/7',
             delay: 400
         }
     };

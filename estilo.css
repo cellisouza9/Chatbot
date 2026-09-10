@@ -3163,6 +3163,48 @@ color: #1A5CD9;
     color: var(--preto-texto);
 }
 
+.plano-desc {
+    font-size: 0.8rem;
+    color: var(--cinza-texto);
+    line-height: 1.5;
+    margin-bottom: 14px;
+}
+
+.plano-ideal {
+    margin-bottom: 16px;
+    padding-top: 12px;
+    border-top: 1px dashed var(--cinza-borda);
+}
+
+.plano-ideal-titulo {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--preto-texto);
+    margin-bottom: 8px;
+}
+
+.plano-ideal ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.plano-ideal li {
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+    font-size: 0.75rem;
+    color: var(--cinza-texto);
+    padding: 2px 0;
+}
+
+.plano-ideal li::before {
+    content: '•';
+    color: var(--roxo);
+    font-weight: 700;
+}
+
 .plano-features {
     list-style: none;
     padding: 0;
@@ -3529,6 +3571,21 @@ color: #1A5CD9;
     color: white;
     border-bottom-right-radius: 4px;
 }
+
+.chatbot-wa-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #25D366;
+    color: #fff;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-decoration: none;
+    transition: 0.2s;
+}
+.chatbot-wa-link:hover { background: #1ebe5a; }
 
 .chatbot-options {
     display: flex;
