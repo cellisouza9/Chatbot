@@ -302,7 +302,7 @@ document.addEventListener('DOMContentLoaded', function () {
         'planos': '💎 Temos 3 planos de automação:<br><br>• <strong>ESSENCIAL</strong> — R$ 197/mês<br>• <strong>PROFISSIONAL</strong> — R$ 397/mês<br>• <strong>ENTERPRISE</strong> — sob consulta<br><br>Todos incluem configuração da IA no seu WhatsApp!',
         'funciona': '🤖 É simples: conectamos a IA ao seu WhatsApp, treinamos com as informações do seu negócio e ela passa a atender, tirar dúvidas, recuperar clientes e vender sozinha, 24 horas por dia.',
         'demo': '🎥 Posso te mostrar como a automação funciona na prática! Preenche o formulário aqui embaixo que um especialista te chama no WhatsApp com uma demonstração ao vivo.',
-        'contato': '📞 Quer falar com um especialista agora?<br><br>📱 WhatsApp: (00) 00000-0000<br>📧 E-mail: contato@cellysistemas.com'
+        'contato': '📞 Quer falar com um especialista agora?<br><br><a href="https://wa.me/5521966729503" target="_blank" rel="noopener" class="bot-chat-wa-link"><i class="fab fa-whatsapp"></i> Conversar no WhatsApp</a><br><br>📧 E-mail: contato@cellysistemas.com'
     };
 
     function addMsg(text, isUser) {

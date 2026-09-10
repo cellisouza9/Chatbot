@@ -2858,6 +2858,56 @@ color: #1A5CD9;
 .footer-bottom-divider {
     color: rgba(255, 255, 255, 0.15);
 }
+
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 20px;
+        row-gap: 28px;
+        margin-bottom: 24px;
+    }
+    .footer-coluna-logo {
+        grid-column: 1 / -1;
+        margin-left: 0;
+        align-items: center;
+        text-align: center;
+    }
+    .footer-coluna-icones {
+        grid-column: 1 / -1;
+        margin-left: 0;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    .footer-icones-img {
+        margin-top: 0;
+        height: 70px;
+    }
+    .footer-coluna {
+        align-items: flex-start;
+        padding-top: 0;
+    }
+    .footer-titulo {
+        font-size: 1rem;
+        padding-top: 0;
+        margin-bottom: 14px;
+    }
+    .footer-links li,
+    .footer-contato li {
+        margin-bottom: 10px;
+    }
+    /* "Contato" é a última .footer-coluna — ocupa a linha toda */
+    .footer-coluna:last-child {
+        grid-column: 1 / -1;
+    }
+    .footer-social {
+        justify-content: center;
+    }
+    .footer-bottom {
+        margin-left: 0;
+        justify-content: center;
+        text-align: center;
+    }
+}
 /* =========================================== */
 /* RODAPÉ FAQ                                 */
 /* =========================================== */

@@ -1664,6 +1664,22 @@ section { position: relative; }
 }
 .bot-chat-msg-user p { background: var(--roxo-fraco); }
 
+/* Link de WhatsApp dentro das respostas do bot */
+.bot-chat-wa-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #25D366;
+    color: #fff;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.82rem;
+    text-decoration: none;
+    transition: 0.2s;
+}
+.bot-chat-wa-link:hover { background: #1ebe5a; }
+
 /* Indicador de "digitando..." com pontinhos animados */
 .bot-chat-typing-dots {
     display: inline-flex;
