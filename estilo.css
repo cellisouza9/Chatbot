@@ -3153,6 +3153,16 @@ color: #1A5CD9;
     font-weight: 500;
 }
 
+.plano-total-anual {
+    font-size: 0.75rem;
+    color: var(--roxo);
+    margin-bottom: 4px;
+}
+
+.plano-total-anual strong {
+    font-weight: 700;
+}
+
 .plano-instalacao {
     font-size: 0.75rem;
     color: var(--cinza-texto);
